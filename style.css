@@ -1,0 +1,102 @@
+/* variables */
+:root {
+  --clr-pri: #3f3f3f;
+  --clr-sec: #c72282;
+}
+
+/* reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* base styles */
+body {
+}
+
+ul {
+  list-style: none;
+}
+
+.grid {
+}
+
+#container {
+  background-image: linear-gradient(to top, #72afd3 0%, #37ecba 100%);
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 5rem;
+  overflow: hidden;
+}
+
+/* fonts */
+@font-face {
+  font-family: "Satisfy Regular";
+  src: url(assets/Satisfy-Regular.ttf);
+}
+
+h1 {
+}
+
+h2 {
+}
+
+a {
+  text-decoration: none;
+  color: #37ecba;
+}
+
+a:hover {
+}
+
+p {
+}
+
+/* mobile styles */
+header,
+header .login,
+header nav ul,
+header .social {
+  display: flex;
+  align-items: center;
+}
+
+header {
+  background: rgba(255, 255, 255, 0.4);
+  height: 5rem;
+  justify-content: space-between;
+}
+
+header .login li,
+header .social li {
+  background: #fff;
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 50%;
+  margin: 0.5rem;
+}
+
+header .login li a,
+header .social li a {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header nav ul a {
+  color: var(--clr-sec);
+}
+
+/* small tablet styles */
+@media only screen and (min-width: 768px) {
+}
+
+/* large tablet & laptop styles */
+@media only screen and (min-width: 992px) {
+}
+
+/* desktop styles */
+@media only screen and (min-width: 1200px) {
+}
