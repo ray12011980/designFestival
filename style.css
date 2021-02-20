@@ -2,6 +2,7 @@
 :root {
   --clr-pri: #3f3f3f;
   --clr-sec: #c72282;
+  --clr-hov: #ee52ad;
 }
 
 /* reset */
@@ -13,44 +14,67 @@
 
 /* base styles */
 body {
+  font-family: Mulish Regular;
+  color: #fff;
 }
 
 ul {
   list-style: none;
 }
 
-.grid {
+.button {
+  background: var(--clr-sec);
+  color: #fff;
+  display: block;
+  width: 8rem;
+  margin: 0 auto;
+  padding: 0.5em;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 #container {
   background-image: linear-gradient(to top, #72afd3 0%, #37ecba 100%);
   max-width: 1024px;
   margin: 0 auto;
-  padding: 0 5rem;
   overflow: hidden;
 }
 
 /* fonts */
 @font-face {
-  font-family: "Satisfy Regular";
-  src: url(assets/Satisfy-Regular.ttf);
+  font-family: "Mulish Regular";
+  src: url(images/fonts/Mulish-VariableFont_wght.ttf);
 }
 
 h1 {
+  font-size: 3em;
+  text-transform: uppercase;
 }
 
 h2 {
+  font-size: 2.5em;
+  text-transform: uppercase;
+  color: var(--clr-pri);
+}
+
+h3 {
+  font-size: 2em;
+  text-transform: uppercase;
+}
+
+h4 {
+  font-size: 1.5em;
+  text-transform: uppercase;
+  color: var(--clr-pri);
+}
+
+p {
+  color: var(--clr-pri);
 }
 
 a {
   text-decoration: none;
   color: #37ecba;
-}
-
-a:hover {
-}
-
-p {
 }
 
 /* mobile styles */
@@ -66,6 +90,7 @@ header {
   background: rgba(255, 255, 255, 0.4);
   height: 5rem;
   justify-content: space-between;
+  padding: 0 5rem;
 }
 
 header .login li,
@@ -85,18 +110,84 @@ header .social li a {
   align-items: center;
 }
 
+header nav ul li {
+  margin: 0 1rem;
+}
+
 header nav ul a {
+  font-weight: bold;
+  text-transform: uppercase;
   color: var(--clr-sec);
 }
 
-/* small tablet styles */
-@media only screen and (min-width: 768px) {
+header nav ul a:hover {
+  color: var(--clr-hov);
 }
 
-/* large tablet & laptop styles */
-@media only screen and (min-width: 992px) {
+main {
+  padding: 3rem 5rem;
 }
 
-/* desktop styles */
-@media only screen and (min-width: 1200px) {
+main .showcase {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+}
+
+.showcase .designers {
+  grid-column: 1 / 4;
+}
+
+.showcase .start {
+  grid-column: 4 / 7;
+  text-align: center;
+}
+
+.showcase .start h4 {
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+}
+
+.showcase .start img {
+  width: 100px;
+  margin-top: 10rem;
+  position: relative;
+  z-index: 1;
+}
+
+.showcase .learn {
+  grid-column: 7 / 10;
+}
+
+.showcase .learn {
+  text-align: right;
+}
+
+.showcase .learn h4 {
+  padding-bottom: 2.5rem;
+}
+
+.showcase .learn p {
+  padding-bottom: 2rem;
+}
+
+footer {
+  position: relative;
+}
+
+footer a {
+  font-size: 0.5rem;
+  letter-spacing: 2px;
+  position: relative;
+  z-index: 1;
+}
+
+footer .circle {
+  position: absolute;
+  top: -200px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 500px;
+  height: 500px;
+  background: #f4e2db;
+  border-radius: 50%;
 }
